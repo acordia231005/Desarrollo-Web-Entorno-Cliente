@@ -25,3 +25,9 @@ function mostrar_potencia(){
     var num = 2*Math.pow(10,-9);
     console.log("El valor de 2*10^-9 es: " + num);
 }
+
+//Ejercicio 5
+function muestra_n_distintas_bases(num){
+    var numDecimal = num.toString(2);
+    console.log("El numero " + num + " en binario es: " + numDecimal);
+}
