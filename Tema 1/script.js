@@ -121,14 +121,92 @@ function Pintar_Confirmacion(){
 //c. Lance una alerta con la decisión del usuario
 //d. Muestre por consola “FIN DEL PROGRAMA”, en negrita subrayado y de
 //color azul.
-function window_practice(){
-    window.prompt("Introduce tu nombre");
-    confirm("¿Quieres abandonar el programa?");
-    if (confirm("¿Quieres abandonar el programa?")) {
+function programa_usuario(){
+    let nombre = prompt("Introduce tu nombre");
+    let decision = confirm("¿Quieres abandonar el programa?");
+    if (decision) {
         alert("Has decidido abandonar el programa");
-    } else {
+    }   else {
         alert("Has decidido continuar en el programa");
     }
     console.log("%cFIN DEL PROGRAMA", "font-weight: bold; text-decoration: underline; color: blue;");
 }
 
+//Ejercicio 16. Realiza un programa que pida por pantalla tu edad, tu nombre, tu ciudad, tu
+//dirección y tu teléfono y que al finalizar muestre un alerta dándote la enhorabuena si
+//la edad de tu cumpleaños elevado a 5 es igual a tu número de teléfono o si
+//simplemente tu ciudad es “Mairena del Alcor”
+function usuario(){
+    let edad = window.prompt("Introduce tu edad");
+    let nombre = window.prompt("Introduce tu nombre");
+    let ciudad = window.prompt("Introduce tu ciudad");
+    let direccion = window.prompt("Introduce tu dirección");
+    let telefono = window.prompt("Introduce tu teléfono");
+    if(Math.pow(edad,5) == telefono || ciudad.toLowerCase() == "mairena del alcor"){
+        alert("Enhorabuena ");
+    }
+}
+
+//Ejercicio 17.  Haz un programa que dado un número de entrada cuente sus cifras y las muestre
+//por consola.
+function cuenta_cifras(){
+    let numero = window.prompt("Introduce un número");
+    let cifras = numero.length;
+    console.log("El número " + numero + " tiene " + cifras + " cifras.");
+}
+
+//Ejercicio 18.Realiza un programa que dada tu edad indique si eres niño (0-16 años), joven (17-25
+//años), adulto (26 - 60 años) o senior, en adelante.
+function categoria_if(){
+    let edad = window.prompt("Introduce tu edad");  
+    if(edad >= 0 && edad <= 16){
+        console.log("Eres un niño");
+    }   else if(edad >= 17 && edad <= 25){
+        console.log("Eres joven");
+    }   else if(edad >= 26 && edad <= 60){
+        console.log("Eres adulto");
+    }   else{
+        console.log("Eres senior");
+    }
+}
+function categoria_switch(){
+    let edad = window.prompt("Introduce tu edad");
+    switch(true){
+        case (edad >= 0 && edad <= 16):
+            console.log("Eres un niño");
+            break;
+        case (edad >= 17 && edad <= 25):
+            console.log("Eres joven");
+            break;
+        case (edad >= 26 && edad <= 60):
+            console.log("Eres adulto");
+            break;
+        default:
+            console.log("Eres senior");
+    }
+}
+
+//Ejercicio 19. Realiza un programa que calcule un número aleatorio entre 1 y 10 y pida intentos
+//hasta que aciertes. Al finalizar debe mostrar por pantalla el número de intentos que
+//has realizado.
+function calcula_num_aleatorio() {
+    let numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+    let intentos = 0;
+    let numeroUsuario;
+    do {
+        numeroUsuario = parseInt(prompt("Introduce un número entre 1 y 10"));
+        intentos++;
+    } while (numeroUsuario !== numeroAleatorio);
+    alert("Has acertado el número en " + intentos + " intentos");   
+}
+
+// Ejercicio 20. Muestra por pantalla el número de múltiplos de siete que existen entre 8 y 100.
+function muestra_multiplos_siete() {
+    let contador = 0;
+    for (let i = 8; i <= 100; i++) {
+        if (i % 7 === 0) {
+            contador++;
+        }
+    }
+    console.log("Hay " + contador + " múltiplos de siete entre 8 y 100.");
+}
