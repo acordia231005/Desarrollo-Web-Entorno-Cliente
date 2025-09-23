@@ -125,11 +125,22 @@ function programa_usuario(){
     let nombre = prompt("Introduce tu nombre");
     let decision = confirm("¿Quieres abandonar el programa?");
     if (decision) {
-        alert("Has decidido abandonar el programa");
+        alert("Has decidido continuar el programa");
     }   else {
-        alert("Has decidido continuar en el programa");
+        alert("Has decidido abandonar en el programa");
     }
-    console.log("%cFIN DEL PROGRAMA", "font-weight: bold; text-decoration: underline; color: blue;");
+    console.log("FIN DEL PROGRAMA");
+}
+
+function pedir_datos(){
+    let seguir = true;
+    while(seguir){
+    let nombre = prompt("Introduce tu nombre: ");
+    console.log("Hola " + nombre);
+    seguir = confirm("¿Desea continuar en el programa?");
+    console.log("Has decidido continuar? " + seguir);
+    }
+    console.log("Fin del programa");
 }
 
 //Ejercicio 16. Realiza un programa que pida por pantalla tu edad, tu nombre, tu ciudad, tu
@@ -142,16 +153,27 @@ function usuario(){
     let ciudad = window.prompt("Introduce tu ciudad");
     let direccion = window.prompt("Introduce tu dirección");
     let telefono = window.prompt("Introduce tu teléfono");
-    if(Math.pow(edad,5) == telefono || ciudad.toLowerCase() == "mairena del alcor"){
-        alert("Enhorabuena ");
+    if(Math.pow(edad,5) === telefono || ciudad.toLowerCase() === "mairena del alcor".toLowerCase()){
+       console.log("Enhorabuena");
+    }
+}
+
+function usuario_v2(){
+    let edad = document.getElementById("edad").value;
+    let nombre = document.getElementById("nombre").value;
+    let ciudad = document.getElementById("ciudad").value;   
+    let direccion = document.getElementById("direccion").value;
+    let telefono = document.getElementById("telefono").value;
+    if(edad ** 5 === telefono || ciudad.toLowerCase() === "mairena del alcor".toLowerCase()){
+       console.log("Enhorabuena");
     }
 }
 
 //Ejercicio 17.  Haz un programa que dado un número de entrada cuente sus cifras y las muestre
 //por consola.
 function cuenta_cifras(){
-    let numero = window.prompt("Introduce un número");
-    let cifras = numero.length;
+    let numero = Number(prompt("Introduce un número"));
+    let cifras = numero.toString().length;
     console.log("El número " + numero + " tiene " + cifras + " cifras.");
 }
 
