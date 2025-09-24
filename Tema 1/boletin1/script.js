@@ -180,31 +180,47 @@ function cuenta_cifras(){
 //Ejercicio 18.Realiza un programa que dada tu edad indique si eres niño (0-16 años), joven (17-25
 //años), adulto (26 - 60 años) o senior, en adelante.
 function categoria_if(){
-    let edad = window.prompt("Introduce tu edad");  
+    let edad = Number(prompt("Introduce tu edad"));
     if(edad >= 0 && edad <= 16){
         console.log("Eres un niño");
     }   else if(edad >= 17 && edad <= 25){
         console.log("Eres joven");
     }   else if(edad >= 26 && edad <= 60){
         console.log("Eres adulto");
-    }   else{
+    }   else if(edad > 60){
         console.log("Eres senior");
+    } else{
+        console.error("Edad no válida");
     }
 }
+
 function categoria_switch(){
-    let edad = window.prompt("Introduce tu edad");
+    let edad =document.getElementById("edad").value;
     switch(true){
         case (edad >= 0 && edad <= 16):
-            console.log("Eres un niño");
+            pintar_mensaje("Eres un niño",true);
             break;
         case (edad >= 17 && edad <= 25):
-            console.log("Eres joven");
+            pintar_mensaje("Eres joven",true);
             break;
         case (edad >= 26 && edad <= 60):
-            console.log("Eres adulto");
+            pintar_mensaje("Eres adulto",true);
+            break;
+        case (edad > 60):
+            pintar_mensaje("Eres senior",true);
             break;
         default:
-            console.log("Eres senior");
+            pintar_mensaje("Error! Edad no válida",false);
+            break;
+    }
+}
+function pintar_mensaje(mensaje, isOk){
+    let aviso = document.getElementById("aviso");
+    aviso.appendChild(mensaje);
+    if(isOk){
+        aviso.style.color = "green";
+    } else{
+        aviso.style.color = "red";
     }
 }
 
@@ -212,7 +228,7 @@ function categoria_switch(){
 //hasta que aciertes. Al finalizar debe mostrar por pantalla el número de intentos que
 //has realizado.
 function calcula_num_aleatorio() {
-    let numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+    const numeroAleatorio = Math.floor(Math.random() * 10) + 1;
     let intentos = 0;
     let numeroUsuario;
     do {
@@ -225,7 +241,8 @@ function calcula_num_aleatorio() {
 // Ejercicio 20. Muestra por pantalla el número de múltiplos de siete que existen entre 8 y 100.
 function muestra_multiplos_siete() {
     let contador = 0;
-    for (let i = 8; i <= 100; i++) {
+    const max = 100;
+    for (let i = 8; i <= max; i++) {
         if (i % 7 === 0) {
             contador++;
         }
