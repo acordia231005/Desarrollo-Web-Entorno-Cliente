@@ -69,35 +69,30 @@ function calcula_ecuacion_segundo_grado() {
 // ejercicio 4
 function calcular_Letra_DNI(){
 const letras = "TRWAGMYFPDXBNJZSQVHLCKE";
-let dni = prompt("Introduce tu número de DNI (sin letra):");
+    do{
+    var dni = Number(prompt("Introduce tu número de DNI (sin letra):"));
+    }while(!isNaN(dni));
 
-dni = parseInt(dni, 10);
-
-    if (!isNaN(dni)) {
-    let resto = dni % 23;
-    let letra = letras.charAt(resto);
-
-    alert(`Tu DNI completo es: ${dni}${letra}`);
-    } else {
-    alert("Por favor, introduce un número válido.");
-    }
+    console.log(letras[dni%23]);
+    
 }
 
+//Ejercicio 5
 function calcula_areas(){
     let opcion;
 
 do {
   opcion = prompt(
-    "MENÚ PRINCIPAL\n" +
-    "1. Calcular área de un triángulo\n" +
-    "2. Calcular área de un rectángulo\n" +
-    "3. Calcular área de un círculo\n" +
-    "4. Salir\n\n" +
-    "Elige una opción (1-4):"
+    "Elige una opcion\n" +
+    "a. Calcular área de un triángulo\n" +
+    "b. Calcular área de un rectángulo\n" +
+    "c. Calcular área de un círculo\n" +
+    "d. Salir\n\n" +
+    "Elige una opción (a-d):"
   );
 
   switch (opcion) {
-    case "1":
+    case "a":
       // Área de un triángulo
       let baseTri = prompt("Introduce la base del triángulo:");
       let alturaTri = prompt("Introduce la altura del triángulo:");
@@ -109,7 +104,7 @@ do {
       }
       break;
 
-    case "2":
+    case "b":
       let baseRec = prompt("Introduce la base del rectángulo:");
       let alturaRec = prompt("Introduce la altura del rectángulo:");
       if (!isNaN(baseRec) && !isNaN(alturaRec)) {
@@ -120,7 +115,7 @@ do {
       }
       break;
 
-    case "3":
+    case "c":
       let radio = prompt("Introduce el radio del círculo:");
       if (!isNaN(radio)) {
         let areaCirculo = Math.PI * Math.pow(radio, 2);
@@ -130,17 +125,19 @@ do {
       }
       break;
 
-    case "4":
+    case "d":
       alert("¡Hasta pronto!");
       break;
 
     default:
       alert("Opción no válida. Intenta de nuevo.");
-  }
+    
+    }
 
-    } while (opcion !== "4");
+    } while (opcion !== "d");
 }
 
+//Ejercicio 6
 function numeroPrimosFor(){
     for (let i = 1; i <= 100; i++) {
         if((i % 7 !== 0) && (i % 3 !== 0) && (i % 2 !== 0)){
