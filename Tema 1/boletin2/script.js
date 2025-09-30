@@ -67,3 +67,111 @@ function calcula_ecuacion_segundo_grado() {
     }
 }
 // ejercicio 4
+function calcular_Letra_DNI(){
+const letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+let dni = prompt("Introduce tu número de DNI (sin letra):");
+
+dni = parseInt(dni, 10);
+
+    if (!isNaN(dni)) {
+    let resto = dni % 23;
+    let letra = letras.charAt(resto);
+
+    alert(`Tu DNI completo es: ${dni}${letra}`);
+    } else {
+    alert("Por favor, introduce un número válido.");
+    }
+}
+
+function calcula_areas(){
+    let opcion;
+
+do {
+  opcion = prompt(
+    "MENÚ PRINCIPAL\n" +
+    "1. Calcular área de un triángulo\n" +
+    "2. Calcular área de un rectángulo\n" +
+    "3. Calcular área de un círculo\n" +
+    "4. Salir\n\n" +
+    "Elige una opción (1-4):"
+  );
+
+  switch (opcion) {
+    case "1":
+      // Área de un triángulo
+      let baseTri = prompt("Introduce la base del triángulo:");
+      let alturaTri = prompt("Introduce la altura del triángulo:");
+      if (!isNaN(baseTri) && !isNaN(alturaTri)) {
+        let areaTri = (baseTri * alturaTri) / 2;
+        alert(`El área del triángulo es: ${areaTri}`);
+      } else {
+        alert("Valores no válidos. Introduce números.");
+      }
+      break;
+
+    case "2":
+      let baseRec = prompt("Introduce la base del rectángulo:");
+      let alturaRec = prompt("Introduce la altura del rectángulo:");
+      if (!isNaN(baseRec) && !isNaN(alturaRec)) {
+        let areaRec = baseRec * alturaRec;
+        alert(`El área del rectángulo es: ${areaRec}`);
+      } else {
+        alert("Valores no válidos. Introduce números.");
+      }
+      break;
+
+    case "3":
+      let radio = prompt("Introduce el radio del círculo:");
+      if (!isNaN(radio)) {
+        let areaCirculo = Math.PI * Math.pow(radio, 2);
+        alert(`El área del círculo es: ${areaCirculo.toFixed(2)}`);
+      } else {
+        alert("Valor no válido. Introduce un número.");
+      }
+      break;
+
+    case "4":
+      alert("¡Hasta pronto!");
+      break;
+
+    default:
+      alert("Opción no válida. Intenta de nuevo.");
+  }
+
+    } while (opcion !== "4");
+}
+
+function numeroPrimosFor(){
+    for (let i = 1; i <= 100; i++) {
+        if((i % 7 !== 0) && (i % 3 !== 0) && (i % 2 !== 0)){
+        console.log(i);
+        }
+    }
+}
+
+function numeroPrimosWhile(){
+    let i = 1;
+
+    while (i <= 100) {
+        if (i % 2 !== 0) {             
+            if (i % 3 !== 0) {         
+                if (i % 7 !== 0) {     
+                    console.log(i);     
+                }
+            }
+        }
+        i++;
+    }
+}
+
+function numeroPrimoDoWhile(){
+
+let i = 1;
+do {
+    if (i % 2 !== 0 && i % 3 !== 0 && i % 7 !== 0) {
+        console.log(i);
+    }
+    i++;
+} while (i <= 100);
+
+}

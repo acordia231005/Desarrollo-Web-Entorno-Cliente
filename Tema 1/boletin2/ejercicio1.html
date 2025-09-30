@@ -1,27 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Boletin 2</title>
     <script src="script.js"></script>
 </head>
 <body>
-    <h1>Boletin 2</h1>
+    <H1>BOLETIN 2</H1>
     <hr>
     <div class="ejercicio">
-        <h2>Ejercicio 0-1(Inventado por el profesor)</h2>
-        <p>Calcula la secuencia de fibonacci atendiendo a la formula</p>
-            <ul>
-                <li>fib(n) = fib(n-1) + fib(n-2)</li>
-                <li>fib(0) = 0</li>
-                <li>fib(1) = 1</li>
-            </ul>
-        <button onclick="calcula_fibonacci()">Calcula Fibonacci</button>
-    </div>
-
-    <div class="ejercicio">
-        <h2>Ejercicio 0-2(Inventado por el profesor)</h2>
-        <p>Calcula el factorial de un numero(n!)</p>
+        <h2>Ejercicio 1:</h2>
+        <p>Escribe un programa que solicite por pantalla 
+            un número al usuario y muestre su factorial.</p>
             <ul>
                 <li>fact(n) = n * fact(n-1)</li>
                 <li>fact(0) = 1</li>
@@ -30,18 +20,62 @@
         <button onclick="calcula_factorial(true)">Calcula Factorial (Recursivo)</button>
         <button onclick="calcula_factorial(false)">Calcula Factorial (Tradicional)</button>
     </div>
-
     <div class="ejercicio">
-        <h2>Ejercicio 2 : Desarrolla un programa que le pida al usuario una cantidad de dias en valor entero y el programa debera devolver cuantas horas , minutos y segundos son.</h2>
+        <h2>Ejercicio 2:</h2>
+        <p>Desarrolla un programa que le pida al usuario 
+            una cantidad de días y el programa deberá devolver 
+            cuantas horas minutos y segundos son.</p>
         <button onclick="calcula_tiempo()">Calcula Tiempo</button>
     </div>
 
     <div class="ejercicio">
-        <h2>Ejercicio 3: Realiza un programa capaz de resolver una ecuacion de segundo grado.
-            Para ello se solicitara el valor de los coeficientes a, b y c y devolvera su solucion.
-        </h2>
+        <h2>Ejercicio 3:</h2>
+        <p>Realiza un programa capaz de resolver una ecuación 
+            de segundo grado. Para ello, se solicitará 
+            el valor de los coeficientes a, b y c y 
+            devolverá su solución.
+        </p>
         <button onclick="calcula_ecuacion_segundo_grado()">Calcula Ecuación</button>
     </div>
 
+    <div class="ejercicio">
+        <h2>Ejercicio 4:</h2>
+        <p>Crea un programa que calcule la letra del DNI 
+            en función del número introducido por el usuario.
+        </p>
+        <button onclick="calcular_Letra_DNI()">Calcula letra del DNI</button>
+    </div>
+
+     <div class="ejercicio">
+        <h2>Ejercicio 5:</h2>
+        <p>Realiza un programa que muestre un menú al usuario con varias opciones. El
+            usuario tendrá que introducir los valores necesarios en cada caso para obtener su
+            solución. Esta lógica se debe repetir siempre que no se indique Salir.
+                a. Calcular el área de un triángulo
+                b. Calcular el área de un rectángulo
+                c. Calcular el área del círculo
+                d. Salir
+        </p>
+        <button onclick="calcula_areas()">Calcula areas</button>
+    </div>
+
+     <div class="ejercicio">
+        <h2>Ejercicio 6:</h2>
+        <p>Realiza un programa que muestre los números impares 
+            que no sean múltiplo de 3 ni de 7 comprendidos 
+            entre el 1 y el 100. Resuelve este programa 
+            en tres versiones distintas usando los tres 
+            bucles conocidos.
+        </p>
+        <button onclick="numeroPrimosFor()">Muestra los numeros impares con for</button>
+        <button onclick="numeroPrimoDoWhile()">Muestra los numeros impares con Do-While</button>
+        <button onclick="numeroPrimosWhile()">Muestra los numeros impares con while</button>
+    </div>
+
+     <div class="ejercicio">
+        <h2>Ejercicio 7:</h2>
+        <p></p>
+        <button onclick="calcula_ecuacion_segundo_grado()">Calcula Ecuación</button>
+    </div>
 </body>
 </html>
