@@ -4,6 +4,7 @@ let juegoIniciado = false;
 let tiradas = [];
 let tiempoInicio = null;
 let carasDado = null;
+
 const maximas_tiradas = 3;
 
 function menuOption(opcion) {
