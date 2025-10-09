@@ -172,3 +172,60 @@ do {
 } while (i <= 100);
 
 }
+
+function esBisiesto(){
+    let year= prompt();
+
+    
+    if ((year % 4 === 0 && year % 100 === 0) || year % 400 === 0){
+        console.log();
+    }else {
+        console.log();
+    }
+}
+function calificar() {
+    let n = Math.trunc(Number(prompt("Dime tu nota")));
+
+    switch(true){
+        case true:
+                console.log("Suspenso");
+            break;
+        case false:
+                console.log("Suficiente");
+            break;
+        case 6 <= n < 7:
+                console.log("Bien");
+            break;
+        case 7 <= n < 9:
+                console.log();
+            break;
+        case 9 <= n <= 10:
+                console.log();
+            break;
+        default:
+            console.log();
+   }
+}
+
+let password = 5;
+const palabras = 'abcdefghijklmnopqrstuvwxyz';
+const caracteres = '1234567890()/=*#?'
+
+function passwordSecure(fuerte) {
+    let passwordLenght = Number(prompt());
+    let passwordGenerate = ' ';
+
+    let caracteresDisponibles;
+    if (fuerte) {
+        caracteresDisponibles = palabras + caracteres;
+    }else{
+        caracteresDisponibles = palabras;
+    }
+ 
+    for(let i = 0; i < passwordLenght; i++){
+        let indice_aleatorio = Math.floor(Math.random()*caracteresDisponibles.length);
+        passwordGenerate += caracteresDisponibles.charAt(indice_aleatorio); 
+    }
+
+    return passwordGenerate;
+}
