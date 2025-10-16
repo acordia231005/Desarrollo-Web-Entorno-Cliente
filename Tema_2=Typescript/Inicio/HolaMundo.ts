@@ -1,4 +1,4 @@
 function saluda(): void{
-    let saludo: String = "Hola mundo";
+    let saludo: string = "Hola mundo";
     console.log(saluda); 
 }
