@@ -1,3 +1,8 @@
+// Para iniciarlo . Dsp de ir a la carpeta de 
+// antes del Typescript ejecutar este comando
+// tsc .\Script.ts 
+
+// Boletin 1
 // Ejercicio 1
 function ej1() {
     let hora : Date = new Date;
