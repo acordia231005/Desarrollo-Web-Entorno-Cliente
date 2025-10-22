@@ -48,12 +48,15 @@ function ej4() : void{
         window.location.href = url;
     }else{
         $writeNode("error2", " una url valida");
+        // Ejercicio 5
         setTimeout(() => $writeNode("error2", ""), 5000);
     }
-    
 }
 
-
+// Ejercicio 6
+function ej6(): void{
+    
+}
 
 
 // Helpers ( comunes para todo el boletin.SIEMPRE EMPIEZAN POR DOLAR) 

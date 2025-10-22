@@ -41,8 +41,12 @@ function ej4() {
     }
     else {
         $writeNode("error2", " una url valida");
+        // Ejercicio 5
         setTimeout(function () { return $writeNode("error2", ""); }, 5000);
     }
+}
+// Ejercicio 6
+function ej6() {
 }
 // Helpers ( comunes para todo el boletin.SIEMPRE EMPIEZAN POR DOLAR) 
 // (AQUI PILLAN EL VALOR DEL INPUT Y EL WRITE NODE ESCRIBE EL MENSAJE )
