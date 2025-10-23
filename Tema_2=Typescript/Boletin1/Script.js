@@ -32,8 +32,8 @@ function ej3() {
     var ventana = window.open("https:www.google.es", "nuevaventana");
     ventana === null || ventana === void 0 ? void 0 : ventana.document.write("hola");
 }
-// Ejercicio 4
-function ej4() {
+// Ejercicio 4 y 5
+function ej4y5() {
     var regexp = new RegExp("^https:\/\/");
     var url = $inputValue("url");
     if (regexp.test(url)) {
@@ -41,12 +41,28 @@ function ej4() {
     }
     else {
         $writeNode("error2", " una url valida");
-        // Ejercicio 5
         setTimeout(function () { return $writeNode("error2", ""); }, 5000);
     }
 }
 // Ejercicio 6
-function ej6() {
+function mostrarSaludo() {
+    var mensaje = document.getElementById("saludo");
+    mensaje.innerHTML = "Hola a todos.";
+}
+setTimeout(function () { return mostrarSaludo(); }, 5000);
+// Ejercicio 7
+function ej7() {
+    var nombre = navigator.appName;
+    var version = navigator.appVersion;
+    //    const conexion = navigator.connection;  // funciona pero se queda como error tachado par q no cause error
+    var plataforma = navigator.platform;
+    console.log(nombre);
+    console.log(version);
+    //  console.log(conexion);  
+    console.log(plataforma);
+}
+// Ejercicio 8
+function ej8() {
 }
 // Helpers ( comunes para todo el boletin.SIEMPRE EMPIEZAN POR DOLAR) 
 // (AQUI PILLAN EL VALOR DEL INPUT Y EL WRITE NODE ESCRIBE EL MENSAJE )
