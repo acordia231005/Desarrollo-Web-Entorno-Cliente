@@ -40,13 +40,29 @@
     <form>
     <input id="edad" type="number">
     </form><br>
-    <ol id="resultado">
-        
-    </ol>
+    <ol id="resultado"></ol>
     <button onclick="analiza_edad()">Analizar edad</button>
     <hr>
     <h2>Ejercicio 4</h2>
-    <p></p>
-    <button></button>
+    <p>Crea una mini app que:</p>
+    <ol type="a">
+        <li>Pregunte el nombre del usuario con un prompt().</li>
+        <li>Lo muestre en pantalla dentro de un <p id="saludo">Hola, ___!</p>.</li>
+        <li>Permita cambiar el color del saludo mediante un select con varios colores.</li>
+        <li>Usa as HTMLSelectElement y as HTMLParagraphElement para los
+            elementos del DOM.</li>
+    </ol>
+    <select name="colores" id="colores" >
+        <option value="white" >Blanco</option>
+        <option value="yellow">Amarillo</option>
+        <option value="red">Rojo</option>
+        <option value="green">Verde</option>
+        <option value="blue">Azul</option>
+    </select>
+
+    <p id="saludo"></p>
+
+    <p id="resultado"></p>
+    <button onclick="ej4()">Activar</button>
 </body>
 </html>

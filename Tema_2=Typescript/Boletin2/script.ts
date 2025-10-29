@@ -41,7 +41,7 @@ function analiza_edad(){
     listaDivisores.textContent = divisores;
 
 //  d.
-    let rangoEdad;
+    let rangoEdad = "";
     switch (true) {
         case edad <= 15 && edad > 0:
                 rangoEdad = "Niño";            
@@ -66,8 +66,21 @@ function analiza_edad(){
     lista.appendChild(mayorMenor);
     lista.appendChild(parImpar);
     lista.appendChild(listaDivisores);
-
- //   let listaCompleta= document.body.appendChild(lista);
- //   listaCompleta: HTMLElement = document.getElementById("mayorMenor") as HTMLElement;
-
 }
+
+// Ejercicio 4
+function ej4(){
+//Preguntar nombre y mostralo por pantalla
+    let nombre = prompt("Dime tu nombre: ");
+    let parrafo : HTMLInputElement = document.getElementById("saludo") as HTMLInputElement;
+    parrafo.textContent = ("Hola, " + nombre + "!");
+//Cambiar color
+    let color;
+/*
+id cada vez de un cambio se coge el color para definir
+recoger por variable el color 
+para establezerlo en un body.style.color
+
+
+*/
+}   
