@@ -72,15 +72,51 @@ function analiza_edad(){
 function ej4(){
 //Preguntar nombre y mostralo por pantalla
     let nombre = prompt("Dime tu nombre: ");
-    let parrafo : HTMLInputElement = document.getElementById("saludo") as HTMLInputElement;
+    let parrafo = document.getElementById("saludo") as HTMLParagraphElement;
     parrafo.textContent = ("Hola, " + nombre + "!");
 //Cambiar color
-    let color;
-/*
-id cada vez de un cambio se coge el color para definir
-recoger por variable el color 
-para establezerlo en un body.style.color
-
-
-*/
+    let color = document.getElementById("colores") as HTMLSelectElement;
+    color.onchange = function() {
+        parrafo.style.color = color.value;
+    };
 }   
+
+//Ejercicio 5
+function mostrarMenu() {
+
+  console.log("MENÚ DE INFORMACIÓN DEL NAVEGADOR");
+  console.log("a. Idioma del navegador");
+  console.log("b. Nombre del navegador");
+  console.log("c. ¿Cookies habilitadas?");
+  console.log("d. Tamaño de la pantalla (ancho x alto)");
+
+  const opcion = prompt("Selecciona una opción (a, b, c, d o e):") as string
+
+  switch (opcion.toLowerCase()) {
+    case "a":
+      console.log("Idioma del navegador:", navigator.language);
+      break;
+
+    case "b":
+      console.log("Nombre del navegador:", navigator.userAgent);
+      break;
+
+    case "c":
+      console.log(
+        "Cookies habilitadas:",
+        navigator.cookieEnabled ? "Sí" : "No"
+      );
+      break;
+
+    case "d":
+      console.log(
+        `Tamaño de pantalla: ${screen.width} x ${screen.height} píxeles`
+      );
+      break;
+    default:
+      console.log("Opción no válida. Intenta de nuevo.");
+  }
+}
+
+// Ejercicio 6
+let url = document.getElementById("url");

@@ -68,12 +68,35 @@ function ej4() {
     var parrafo = document.getElementById("saludo");
     parrafo.textContent = ("Hola, " + nombre + "!");
     //Cambiar color
-    var color;
-    /*
-    id cada vez de un cambio se coge el color para definir
-    recoger por variable el color
-    para establezerlo en un body.style.color
-    
-    
-    */
+    var color = document.getElementById("colores");
+    color.onchange = function () {
+        parrafo.style.color = color.value;
+    };
 }
+//Ejercicio 5
+function mostrarMenu() {
+    console.log("MENÚ DE INFORMACIÓN DEL NAVEGADOR");
+    console.log("a. Idioma del navegador");
+    console.log("b. Nombre del navegador");
+    console.log("c. ¿Cookies habilitadas?");
+    console.log("d. Tamaño de la pantalla (ancho x alto)");
+    var opcion = prompt("Selecciona una opción (a, b, c, d o e):");
+    switch (opcion.toLowerCase()) {
+        case "a":
+            console.log("Idioma del navegador:", navigator.language);
+            break;
+        case "b":
+            console.log("Nombre del navegador:", navigator.userAgent);
+            break;
+        case "c":
+            console.log("Cookies habilitadas:", navigator.cookieEnabled ? "Sí" : "No");
+            break;
+        case "d":
+            console.log("Tama\u00F1o de pantalla: ".concat(screen.width, " x ").concat(screen.height, " p\u00EDxeles"));
+            break;
+        default:
+            console.log("Opción no válida. Intenta de nuevo.");
+    }
+}
+// Ejercicio 6
+var url = document.getElementById("url");

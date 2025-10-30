@@ -47,7 +47,7 @@
     <p>Crea una mini app que:</p>
     <ol type="a">
         <li>Pregunte el nombre del usuario con un prompt().</li>
-        <li>Lo muestre en pantalla dentro de un <p id="saludo">Hola, ___!</p>.</li>
+        <li>Lo muestre en pantalla dentro de un <p id="saludo">Hola, mundo!</p>.</li>
         <li>Permita cambiar el color del saludo mediante un select con varios colores.</li>
         <li>Usa as HTMLSelectElement y as HTMLParagraphElement para los
             elementos del DOM.</li>
@@ -60,9 +60,34 @@
         <option value="blue">Azul</option>
     </select>
 
-    <p id="saludo"></p>
-
     <p id="resultado"></p>
     <button onclick="ej4()">Activar</button>
+
+    <h2>Ejercicio 5</h2>
+    <p>1. Crea el siguiente menú que 
+        muestre por consola la información seleccionada:</p>
+    <ol type="a">
+        <li>El idioma del navegador</li>
+        <li>El nombre del navegador</li>
+        <li>Si tiene o no cookies habilitadas</li>
+        <li>El tamaño de alto y ancho de la pantalla</li>
+    </ol>
+    <button onclick="mostrarMenu()">Menu</button>
+
+    <h2>Ejercicio 6</h2>
+    <p> Crea un mini navegador que contenga los siguientes elementos</p>
+    <ol type="a">
+        <li>Un campo texto (validado) que reciba una URL</li>
+        <li>Un botón para ir o navegar a dicha URL</li>
+        <li>Un botón para ir hacia atrás</li>
+        <li>Otro para ir hacia adelante</li>
+        <li>Y otro último para recargar la página.</li>
+    </ol>
+    <label for="URL">URL</label><br>
+    <input type="url"><br>
+    <button id="goBtn">ir a la web</button><br>
+    <button id="backBtn">ir hacia atras</button><br>
+    <button id="forwardBtn">ir hacia delante</button><br>
+    <button id="reloadBtn">recargar</button><br>
 </body>
 </html>

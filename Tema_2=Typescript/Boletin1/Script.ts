@@ -63,7 +63,7 @@ setTimeout(() => mostrarSaludo(), 5000);
 function ej7(){
     const nombre = navigator.appName;
     const version = navigator.appVersion;
-//    const conexion = navigator.connection;  // funciona pero se queda como error tachado par q no cause error
+//    const conexion = navigator.connection;  // funciona pero se queda como error, tachado para q no cause error
     const plataforma = navigator.platform;
 
     console.log(nombre);
