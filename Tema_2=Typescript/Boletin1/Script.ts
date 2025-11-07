@@ -61,15 +61,15 @@ setTimeout(() => mostrarSaludo(), 5000);
 
 // Ejercicio 7
 function ej7(){
-    const nombre = navigator.appName;
-    const version = navigator.appVersion;
+ //   const nombre = navigator.appName;
+//    const version = navigator.appVersion;
 //    const conexion = navigator.connection;  // funciona pero se queda como error, tachado para q no cause error
-    const plataforma = navigator.platform;
+//    const plataforma = navigator.platform;
 
-    console.log(nombre);
-    console.log(version);
+//    console.log(nombre);
+//    console.log(version);
 //  console.log(conexion);  
-    console.log(plataforma);
+ //   console.log(plataforma);
 }
 
 // Ejercicio 8
