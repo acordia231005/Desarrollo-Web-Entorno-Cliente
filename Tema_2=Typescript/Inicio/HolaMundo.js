@@ -1,4 +1,7 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function saluda() {
-    var saludo = "Hola mundo";
+    let saludo = "Hola mundo";
     console.log(saluda);
 }
+//# sourceMappingURL=HolaMundo.js.map
