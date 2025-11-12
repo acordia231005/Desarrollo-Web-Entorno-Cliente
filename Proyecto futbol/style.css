@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f6fa;
+  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  width: 90%;
+  max-width: 700px;
+}
+
+form h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select, input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 120px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 900px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #ecf0f1;
+}
+
+tr:hover {
+  background-color: #d0e6f7;
+}
