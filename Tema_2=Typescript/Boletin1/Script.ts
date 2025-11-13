@@ -86,7 +86,7 @@ function $inputValue(id: string) : string{
     let result = "";
     
     if(input){
-        result = input.value; // Aqui leo el valor
+        result = input.value; 
     }
     return result;
 }
