@@ -1,0 +1,63 @@
+<section class="seccion">
+  <h2>Registrar partido</h2>
+
+  <form #formPartido="ngForm" (ngSubmit)="guardarPartido()">
+    <div>
+      <label>Equipo local</label>
+      <select
+        name="equipoLocal"
+        [(ngModel)]="idEquipoLocal"
+        required>
+        <option *ngFor="let equipo of equipos" [value]="equipo.id">
+          {{ equipo.nombre }}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <label>Equipo visitante</label>
+      <select
+        name="equipoVisitante"
+        [(ngModel)]="idEquipoVisitante"
+        required>
+        <option *ngFor="let equipo of equipos" [value]="equipo.id">
+          {{ equipo.nombre }}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <label>Goles local</label>
+      <input
+        type="number"
+        name="golesLocal"
+        [(ngModel)]="golesLocal"
+        min="0"
+        required>
+    </div>
+
+    <div>
+      <label>Goles visitante</label>
+      <input
+        type="number"
+        name="golesVisitante"
+        [(ngModel)]="golesVisitante"
+        min="0"
+        required>
+    </div>
+
+    <div>
+      <label>Jornada</label>
+      <input
+        type="number"
+        name="jornada"
+        [(ngModel)]="jornada"
+        min="1"
+        required>
+    </div>
+
+    <button type="submit" [disabled]="!formPartido.valid">
+      Guardar partido
+    </button>
+  </form>
+</section>

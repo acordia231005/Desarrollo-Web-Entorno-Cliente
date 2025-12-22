@@ -1,0 +1,36 @@
+<section class="seccion">
+  <h2>Tabla de clasificación</h2>
+
+  <table class="tabla">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Escudo</th>
+        <th>Equipo</th>
+        <th>PJ</th>
+        <th>PG</th>
+        <th>PE</th>
+        <th>PP</th>
+        <th>GF</th>
+        <th>GC</th>
+        <th>DG</th>
+        <th>Pts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let equipo of equipos; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ equipo.escudo }}</td>
+        <td>{{ equipo.nombre }}</td>
+        <td>{{ equipo.partidosJugados }}</td>
+        <td>{{ equipo.partidosGanados }}</td>
+        <td>{{ equipo.partidosEmpatados }}</td>
+        <td>{{ equipo.partidosPerdidos }}</td>
+        <td>{{ equipo.golesAFavor }}</td>
+        <td>{{ equipo.golesEnContra }}</td>
+        <td>{{ equipo.diferenciaGoles }}</td>
+        <td>{{ equipo.puntos }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
